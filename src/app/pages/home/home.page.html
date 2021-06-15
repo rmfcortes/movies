@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let movie of movies" detail style="margin-top: 16px;" (click)="presentMovie(movie)">
+    <ion-thumbnail slot="start">
+      <img [src]="movie.show.image.medium" *ngIf="movie.show.image"/>
+    </ion-thumbnail>
+    <ion-label>{{movie.show.name}}</ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="form" (ngSubmit)="signup()" class="form" *ngIf="form">
+  
+    <!-- Name input -->
+    <div style="position: relative;">
+        <ion-input class="input" placeholder="Nombre completo*" formControlName="name" type="text"></ion-input>
+        <ng-container *ngFor="let validation of validation_message.name">
+            <div class="error" *ngIf="form.get('name').hasError(validation.type) && (form.get('name').dirty || form.get('name').touched)">
+                {{ validation.message }}
+            </div>
+        </ng-container>
+    </div>
+
+    <!-- Username input -->
+    <div style="position: relative;">
+      <ion-input class="input" placeholder="Usuario*" formControlName="username" type="text"></ion-input>
+      <ng-container *ngFor="let validation of validation_message.username">
+          <div class="error" *ngIf="form.get('username').hasError(validation.type) && (form.get('username').dirty || form.get('username').touched)">
+              {{ validation.message }}
+          </div>
+      </ng-container>
+  </div>
+
+  <!-- Password input -->
+  <div style="position: relative;">
+    <ion-input class="input" placeholder="Contraseña*" formControlName="password" type="password"></ion-input>
+    <ng-container *ngFor="let validation of validation_message.password">
+        <div class="error" *ngIf="form.get('password').hasError(validation.type) && (form.get('password').dirty || form.get('password').touched)">
+            {{ validation.message }}
+        </div>
+    </ng-container>
+  </div>
+
+    <!-- Login -->
+    <ion-button style="margin-top: 64px;" color="primary" shape="round" expand="block" type="submit" [disabled]="form.invalid">
+        Registrar cuenta
+    </ion-button>
+
+  </form>
+
+</ion-content>

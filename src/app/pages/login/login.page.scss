@@ -1,0 +1,29 @@
+ion-content {
+    --overflow: hidden;
+}
+
+.form {
+    width: 100%;
+    padding: 32px;
+}
+
+.divEye {
+    margin-top: 2rem;
+    position: relative;
+    background: #4d81976e;
+    border-radius: 16px 0 16px 0px;
+}
+
+.eye {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.new-acount {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: var(--ion-color-secondary);
+}
+

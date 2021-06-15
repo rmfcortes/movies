@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="start" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{movie?.show.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img *ngIf="movie.show.image" [src]="movie.show.image.original" alt="" style="width: 100%;">
+  <ion-item>
+    <ion-label>
+      <p><strong>Language:</strong>{{movie.show.language}}</p>
+      <p *ngIf="movie.show.genres.length > 0"><strong>Genres:</strong>{{movie.show.genres}}</p>
+      <p *ngIf="movie.show.rating.average"><strong>Rating:</strong>{{movie.show.rating.average}}</p>
+    </ion-label>
+  </ion-item>
+  <p [innerHtml]="movie.show.summary" style="padding: 0 16px;"></p>
+</ion-content>

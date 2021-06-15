@@ -1,0 +1,68 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+.input {
+    width: 100%;
+    height: 50px;
+    margin-top: 2.5rem;
+    background: #4d81976e;
+    border-radius: 16px 0 16px 0px;
+    --padding-end: 2.5rem;
+    --padding-start: 16px !important;
+    // --placeholder-color: grey;
+}
+
+.inputIcon {
+    width: 80%;
+    height: 50px;
+    --padding-end: 2.5rem;
+    --padding-start: 16px !important;
+    // --placeholder-color: grey;
+}
+
+.error {
+    color: red;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.15px;
+    position: absolute;
+    left: 16px;
+}
+
+.flex_start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
